@@ -1,7 +1,5 @@
-export default function GET() {
-  return new Response("Hello, World!", {
-    headers: {
-      "Content-Type": "text/plain",
-    },
-  });
+import { NextResponse } from "next/server";
+
+export async function GET() {
+  return NextResponse.json({ message: "Hello, World!" });
 }
